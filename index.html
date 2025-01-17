@@ -3,17 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=build"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
     <title>Document</title>
   </head>
   <body>
     <div class="page">
-      <div class="logo-section"></div>
+      <div class="logo-section">
+        <div class="logo-box">
+          <span class="material-symbols-outlined">build</span>
+          <h1>GANTES</h1>
+        </div>
+      </div>
 
       <div class="form-section">
         <p class="hero-text">
-          This is not a real life online service! You know you need something
-          like this in your life to help you realize your deepest dreams. <br />
+          This is not a real life online service! This is just a sign up sheet
+          for my portfolio. The power of CSS and HTML is nuts! I can't wait to
+          see what awaits for me.<br />
           Sign up <em>now</em> to get started. <br /><br />You <em>know</em> you
           want to.
         </p>
@@ -43,22 +59,34 @@
                 id="phone"
                 name="phone"
                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                required
               />
             </div>
 
             <div>
               <label for="password">PASSWORD</label>
-              <input type="password" id="password" name="password" required />
+              <input
+                type="password"
+                id="password"
+                name="password"
+                minlength="8"
+                required
+              />
             </div>
 
             <div>
               <label for="confirm-password">CONFIRM PASSWORD</label>
-              <input type="password" id="confirm-password" required />
+              <input
+                type="password"
+                id="confirm-password"
+                minlength="8"
+                required
+              />
             </div>
           </fieldset>
 
           <div class="submit-box">
-            <button type="submit">Create Account</button>
+            <button type="submit"><h2>Create Account</h2></button>
           </div>
         </form>
         <p class="login-text">Already have an account? <a href="">Log in</a></p>

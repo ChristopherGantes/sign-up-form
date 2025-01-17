@@ -10,6 +10,8 @@
   padding: 0;
 }
 
+*:focus {outline:0px none transparent;}
+
 body {
   /* line height not suitable for headings */
   font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -37,6 +39,7 @@ p, h1, h2, h3, h4, h5, h6 {
   --form-padding: 50px;
   --shadow-color: #AAAAAA;
   --form-label-color: #393939;
+  --olive-green: #596D48;
 }
 
 .page {
@@ -50,6 +53,32 @@ p, h1, h2, h3, h4, h5, h6 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+div.logo-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 30vh;
+  background: rgba(0, 0, 0, .7);
+}
+
+.material-symbols-outlined {
+  font-size: 10rem;
+  color: white;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+
+div.logo-box > h1 {
+  font-family: doto;
+  font-size: 9rem;
+  color: white;
 }
 
 .form-section {
@@ -96,8 +125,17 @@ form > fieldset.text-input label {
 
 form > fieldset.text-input input {
   padding: 3px 6px;
-  border: 1px solid #eaeaea;
+  border: 2px solid #E5E7EB;
   border-radius: 5px;
+}
+
+form > fieldset.text-input input:focus {
+  border-color: cornflowerblue;
+  box-shadow: 5px 5px 10px 0px var(--shadow-color);
+}
+
+form > fieldset.text-input input:user-invalid {
+  border-color: red;
 }
 
 form > div.submit-box {
@@ -107,12 +145,16 @@ form > div.submit-box {
 form > div.submit-box button {
   min-width: fit-content;
   padding: 15px 50px;
-  background-color: rgb(77, 111, 77);
+  background-color: var(--olive-green);
   color: white;
   font-weight: 600;
   border: 1px none black;
   border-radius: 10px;
   box-shadow: 5px 5px 10px var(--shadow-color);
+}
+
+div.submit-box button > h2 {
+  font-size: 1rem;
 }
 
 p.login-text {
@@ -125,9 +167,9 @@ p.login-text > a {
 }
 
 p.login-text > a:link {
-  color: rgb(77, 111, 77);
+  color: var(--olive-green);
 }
 
 p.login-text > a:visited {
-  color: rgb(77, 111, 77);
+  color: var(--olive-green);
 }
